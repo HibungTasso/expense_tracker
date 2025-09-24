@@ -14,12 +14,18 @@ class ExpensesList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool isDark = Theme.of(context).brightness == Brightness.dark;
+
     return ListView.builder(
       itemCount: expenses_list.length,
       itemBuilder: (contex, index) {
+        //Dismissible card
         return Dismissible(
+          //show background color red when dismissing
           background: Container(
-            color: Theme.of(context).colorScheme.error.withAlpha(100),
+            color: isDark
+                ? Color.fromARGB(150, 255, 0, 0)
+                : Theme.of(context).colorScheme.error.withAlpha(100),
             margin: EdgeInsets.symmetric(
               horizontal: Theme.of(context).cardTheme.margin!.horizontal,
             ),

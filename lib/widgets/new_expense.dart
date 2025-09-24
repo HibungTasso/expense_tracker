@@ -50,10 +50,7 @@ class _NewExpenseState extends State<NewExpense> {
   void _saveExpense() {
     String title = _titleController.text.trim();
     double? amount = double.tryParse(_amountController.text);
-    if (title == null ||
-        amount == null ||
-        amount <= 0 ||
-        _selectedDate == null) {
+    if (amount == null || amount <= 0 || _selectedDate == null) {
       //Error Message
       showDialog(
         context: context,
@@ -93,10 +90,7 @@ class _NewExpenseState extends State<NewExpense> {
           TextField(
             controller: _titleController,
             maxLength: 35,
-            decoration: InputDecoration(
-              label: Text("Title"),
-              labelStyle: TextStyle(color: Colors.black),
-            ),
+            decoration: InputDecoration(label: Text("Title")),
           ),
 
           //amount and date
@@ -110,7 +104,6 @@ class _NewExpenseState extends State<NewExpense> {
                   decoration: InputDecoration(
                     label: Text("Amount"),
                     prefix: Text("Rs. "),
-                    labelStyle: TextStyle(color: Colors.black),
                   ),
                 ),
               ),

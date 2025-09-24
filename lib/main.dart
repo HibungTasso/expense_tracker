@@ -35,13 +35,9 @@ void main() {
         ),
       ),
 
+      //Dark theme
       darkTheme: ThemeData.dark().copyWith(
         colorScheme: kDarkColorScheme,
-        scaffoldBackgroundColor: kDarkColorScheme.onSurface,
-        // appBarTheme: AppBarThemeData().copyWith(
-        //   backgroundColor: kDarkColorScheme.onPrimaryContainer,
-        //   foregroundColor: kDarkColorScheme.primaryContainer,
-        // ),
         cardTheme: CardThemeData().copyWith(
           color: kDarkColorScheme.secondaryContainer,
           margin: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
@@ -51,13 +47,12 @@ void main() {
             backgroundColor: kDarkColorScheme.primaryContainer,
           ),
         ),
-        // textTheme: ThemeData().textTheme.copyWith(
-        //   titleLarge: TextStyle(
-        //     fontWeight: FontWeight.bold,
-        //     color: kDarkColorScheme.onSecondaryContainer,
-        //     fontSize: 16,
-        //   ),
-        // ),
+        //Input TextField Style
+        inputDecorationTheme: InputDecorationTheme(
+          labelStyle: TextStyle(color: Colors.white),
+          floatingLabelStyle: TextStyle(color: Colors.white),
+          hintStyle: TextStyle(color: Colors.white70),
+        ),
       ),
 
       //Home Content

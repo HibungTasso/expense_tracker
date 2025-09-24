@@ -106,13 +106,7 @@ class _ExpenseState extends State<Expenses> {
       //Expenses List
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 10),
-        child: Column(
-          children: [
-            Text("Chart"),
-            SizedBox(height: 10),
-            Expanded(child: mainContent),
-          ],
-        ),
+        child: Column(children: [Expanded(child: mainContent)]),
       ),
     );
   }
